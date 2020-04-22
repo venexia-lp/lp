@@ -5,7 +5,6 @@ import Scroll from '../components/Scroll';
 
 import config from '../../config';
 import Footer from '../components/Footer';
-import ScrollToTop from '../components/ScrollToTop';
 
 const IndexPage = () => (
   <Layout>
@@ -30,8 +29,8 @@ const IndexPage = () => (
               into the world of the Sangui, vampires, who behind the scenes are
               the real puppetmasters of the Republic.
             </p>
-            <Scroll type="id" element="services" offset={100}>
-              <a className="btn btn-dark btn-xl" href="#services">
+            <Scroll type="id" element="emailCollect" offset={100}>
+              <a className="btn btn-dark btn-xl" href="#emailCollect">
                 Join the Società Nostra
               </a>
             </Scroll>
@@ -92,6 +91,73 @@ const IndexPage = () => (
       </div>
     </section>
 
+    <section
+      className="content-section bg-light text-black text-center"
+      id="emailCollect"
+    >
+      <div className="container text-center">
+        <div className="row">
+          <div className="col-lg-10 mx-auto">
+            <h2>Join the Società Nostra</h2>
+            <p className="lead mb-5">
+              Venèxia is still a Work in Progress. If you want to know when
+              something happens to his project or to provide feedback down the
+              line, please consider leaving your email here.
+            </p>
+
+            <link
+              href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
+              rel="stylesheet"
+              type="text/css"
+            />
+            <div
+              style={{
+                clear: 'left',
+                width: '100%',
+              }}
+            >
+              <form
+                action="https://venexia.us8.list-manage.com/subscribe/post?u=63143c4cca9a7c906f891e0ea&amp;id=87eb6528aa"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+                novalidate
+              >
+                <div class="input-group mb-3" id="mc_embed_signup_scroll">
+                  <input
+                    type="email"
+                    name="EMAIL"
+                    className="email form-control"
+                    id="mce-EMAIL"
+                    placeholder="email address"
+                    required
+                  />
+                  <div style={{ display: 'none' }} aria-hidden="true">
+                    <input
+                      type="text"
+                      name="b_63143c4cca9a7c906f891e0ea_87eb6528aa"
+                      tabindex="-1"
+                    />
+                  </div>
+                  <div class="input-group-append">
+                    <input
+                      type="submit"
+                      value="Subscribe"
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
+                      className="btn btn-dark"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="callout">
       <div className="container text-center">
         <h2
@@ -100,16 +166,14 @@ const IndexPage = () => (
         >
           Are you ready to experience <em>your</em> adventure in Venèxia?
         </h2>
-        <a
-          className="btn btn-dark btn-xl"
-          href="https://github.com/anubhavsrivastava/gatsby-starter-stylish"
-        >
-          Join the Società Nostra
-        </a>
+        <Scroll type="id" element="emailCollect" offset={100}>
+          <a className="btn btn-dark btn-xl" href="#emailCollect">
+            Join the Società Nostra
+          </a>
+        </Scroll>
       </div>
     </section>
 
-    <ScrollToTop />
     <Footer />
   </Layout>
 );
